@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    
+    background-color: $blanco;
+    font-family: $font-lora;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@media screen and (orientation:portrait){
+    body {
+        font-size: .9rem;
+    }
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+header{
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $blanco;
+    color: $blanco;
+    font-size: 1.2rem;
+}
+
+header h1{
+    background: url(../img/WoolfLook.jpg) 100% 100%;
+    background-position: center;
+    border-bottom: solid 2px $violeta-oscuro;
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+@media screen and (orientation:portrait) { 
+    header {
+        font-size: 1rem;
+    }
+}
+
+nav{
+    text-align: center;
+    background-color: $violeta;
+    border-bottom: solid 2px $violeta-oscuro;
+    padding: 10px 0;
+    max-width: 1350px;
+    margin: auto;
+    position: sticky;
+    top: 0;
+}
+
+h1:not(header h1){
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: $negro;
+    font-weight: 500;
+}
+
+a:hover{
+    color: $naranja;
+}
+
+.current {
+    font-weight: 800;
+    color: $violeta-oscuro;
+}
+
+nav a{
+    color: $blanco;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 450px;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+@media screen and (orientation:portrait){
+    nav ul{
+        font-size: 1rem;
+        display: block;
+    }
+}
+
+.figures {
+    display: flex;
+    max-width: 1300px;
+    padding: 30px 0;
+    margin: auto;
+}
+
+.figures figure{
+    width: 30vw;
+    max-width: 400px;
+    height: 40vw;
+    max-height: 550px;
+    margin: auto;
+}
+
+.figures img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (orientation:portrait){
+
+    .figures figure {
+        width: 60vw;
+        height: 80vw;
+    }
+
+    #woolfuno, #woolftres {
+        display: none;
+    }
+
+}
+
+.biografia, .libros{
+    width: 90vw;
+    max-width: 1000px;
+    margin: 30px auto;
+    border: solid 2px $violeta;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* +++++++++++++ BIOGRAFIA ++++++++++++++++*/
+
+.foto{
+    display: flex;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+.foto figure{
+    padding: 10px;
+    background-color: $violeta;
+    max-width: 500px;
+    max-height: 680px;
+}
+
+.foto img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.foto div{
+    margin: 50px 0 0 auto;
+    width: 90vw;
+    max-width: 750px;
+    text-align: justify;
+}
+
+@media screen and (orientation:portrait) {
+    .foto {
+        display: block;
+    }
+
+    .foto figure {
+        margin: auto;
+    }
+
+    .foto div{
+        margin: 20px auto 50px auto;
+    }
+}
+
+/* +++++++++++++ BIBLIOGRAFIA ++++++++++++++++*/
+
+ol{
+    width: 85vw;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* +++++++++++++ LIBROS ++++++++++++++++*/
+
+
+
+.categoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1300px){
+    .categoria{
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+    }
+}
+
+@media screen and (orientation:portrait){
+    .categoria {
+        display: block;
+        max-width: 425px;
+    }
+}
+
+.categoria div figure, 
+.categoria div img {
+    max-width: 200px;
+    max-height: 300px;
+}
+
+.Novela,
+.Ensayo,
+.Cuento,
+.Biografía {
+    display: flex;
+    max-width: 425px;
+    padding: 10px;
+    margin: 10px;
+    background-color: $violeta-claro;
+    border-radius: 5px;
+}
+
+.Novela div,
+.Ensayo div,
+.Cuento div,
+.Biografía div{
+    margin-left: 10px;
+}
+
+.subMenu button {
+    width: 70px;
+    border: solid 1px $violeta;
+    border-radius: 5px;
+    padding: 5px;
+    height: 100%;
+    background-color: $blanco;
+}
+
+.subMenu button:hover{
+    background-color: $violeta;
+}
+
+.subMenu ul li {
+    max-width: 100px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.subMenu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 450px;
+    margin: auto;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+@media screen and (orientation:portrait){
+    .subMenu button {
+        border: none;
+        margin: 0 15px;
+    }
+
+    .subMenu ul {
+        display: block;
+    }
+
+    .subMenu li {
+        margin: auto;
+        border-bottom: solid 1px $violeta-oscuro;
+    }
+}
+
+.informacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: $violeta-claro;
+    border-radius: 50px;
+}
+
+.informacion figure:not(.derecha figure){
+    width: 30vw;
+    max-width: 300px;
+    margin: auto;
+}
+
+.informacion img{
+    width: 100%;
+}
+
+@media screen and (orientation:portrait){
+    .informacion{
+        display: block;
+        padding: 30px;
+    }
+    .informacion figure:not(.derecha figure){
+        margin: auto;
+    }
+    .centro h1{
+        text-align: center;
+    }
+}
+
+.centro p {
+    text-align: justify;
+    max-width: 500px;
+}
+
+.centro h1 {
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.centro h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media screen and (orientation:portrait){
+    .centro {
+        margin:auto;
+    }
+
+    .centro h1{
+        text-align: center;
+    }
+
+    .centro p {
+        max-width: 90vw;
+    }
+}
+
+.derecha{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.derecha h3{
+    margin-top: 10px;
+}
+
+.derecha ul {
+    border: solid 5px $violeta-oscuro;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    height: 450px;
+    width: 80vw;
+    max-width: 1100px;
+    margin: 5px auto;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.derecha ul li {
+    max-width: 150px;
+    margin: 5px auto;
+}
+
+.derecha ul li figure {
+    width: 150px;
+    height: 210px;
+    margin-bottom: 5px;
+}
+
+.derecha ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (orientation:portrait){
+    .derecha ul {
+        margin: auto;
+        display: block;
+        width: 200px;
+        height: 400px;
+        overflow-x: scroll;
+    }
+}
+
+button:not(.subMenu button, .libroBoton) {
+    background-color: $violeta-oscuro;
+    height: 30px;
+    width: 60px;
+    color: $blanco;
+    border: none;
+    border-radius: 5px;
+}
+
+.libroBoton {
+    width: 150px;
+    background-color: $violeta-oscuro;
+    height: 30px;
+    color: $blanco;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button:hover:not(.subMenu button) {
+    color: $naranja;
+}
